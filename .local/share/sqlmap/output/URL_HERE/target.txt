@@ -1,0 +1,1 @@
+http://URL_HERE (GET)  # sqlmap.py -u URL_HERE --batch
